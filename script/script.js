@@ -85,17 +85,19 @@ messangerBtn.addEventListener('click', () => {
 const messangerItems = document.querySelectorAll('.messanger-list-link');
 
 let isBurgerShow = false;
-
+const bodyDoc = document.querySelector('.main-body');
 console.log(window.innerWidth)
   if(window.innerWidth <= 1090){
     document.querySelector('.burger-menu').addEventListener('click', () => {
       
       if(!isBurgerShow){
         document.querySelector('.header-main-nav').style.right = "0";
+        bodyDoc.classList.add('body-fixed');
         isBurgerShow = true;
       } else {
         document.querySelector('.header-main-nav').style.right = "-200px";
         isBurgerShow = false;
+        bodyDoc.classList.remove('body-fixed');
       }
     })
   }

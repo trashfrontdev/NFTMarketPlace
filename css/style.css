@@ -26,6 +26,11 @@ body {
   min-height: 100vh;
   position: relative;
 }
+.body-fixed {
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+}
 .header {
   width: 100%;
 }
