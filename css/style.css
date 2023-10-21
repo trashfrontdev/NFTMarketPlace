@@ -29,9 +29,15 @@ body {
 .header {
   width: 100%;
 }
+.burger-button {
+  z-index: 2;
+  display: none;
+}
 .main-header-container {
   padding: 20px 50px;
   display: flex;
+  position: relative;
+  z-index: 432;
   justify-content: space-between;
   align-items: center;
 }
@@ -48,6 +54,7 @@ body {
   font-weight: 600;
   line-height: 140%;
 }
+
 .nav-item-button {
   height: 60px;
   border-radius: 20px;
@@ -704,9 +711,7 @@ body {
 .media-1000-img {
   display: none;
 }
-.burger-menu {
-  display: none;
-}
+
 .article-grid-info {
   display: flex;
   flex-direction: column;

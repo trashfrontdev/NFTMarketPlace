@@ -31,12 +31,30 @@
   .body-flex-item h5 {
     font-size: 22px;
   }
-  .burger-menu {
+  .burger-button {
     display: block;
+    z-index: 54983;
   }
   /* ----- HEADER ----- */
+  .header-main-nav {
+    position: absolute;
+    right: -200px;
+    top: 0;
+    height: 100vh;
+    padding: 70px 30px 0 30px;
+    background-color: var(--Background---Secondary, #3b3b3b);
+    border-radius: 10px 0 0 10px;
+    transition: all 0.4s;
+  }
+  .nav-item-link {
+    padding: 0;
+  }
   .header-nav-items {
-    display: none;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: flex-start;
+
   }
   /* ----- SECTION ----- */
   .section-flex-item:last-child {

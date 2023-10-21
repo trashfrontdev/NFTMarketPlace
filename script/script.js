@@ -36,19 +36,19 @@ const documentItems = [
 
 const signUpBtn = document.querySelector('.nav-item-button');
 
-signUpBtn.addEventListener('click', () => {
-  for(let docItem = 0; docItem < documentItems.length; docItem++){
-    setTimeout(() => {
-      documentItems[docItem].classList.add('main-animation');
-      documentItems[docItem].style.animationName = "hide-wrapper";
-      setTimeout(() => {
-        documentItems[docItem].style.display = "none";
-      }, 350)
-    }, count)
-    count += 350;
-  }
-  document.querySelector('.sign-up-wrapper').style.display = "flex";
-})
+// signUpBtn.addEventListener('click', () => {
+//   for(let docItem = 0; docItem < documentItems.length; docItem++){
+//     setTimeout(() => {
+//       documentItems[docItem].classList.add('main-animation');
+//       documentItems[docItem].style.animationName = "hide-wrapper";
+//       setTimeout(() => {
+//         documentItems[docItem].style.display = "none";
+//       }, 350)
+//     }, count)
+//     count += 350;
+//   }
+//   document.querySelector('.sign-up-wrapper').style.display = "flex";
+// })
 let count = 0;
 const logoButton = document.querySelector('.header-nav-logo');
 logoButton.addEventListener('click', () => {
@@ -83,3 +83,19 @@ messangerBtn.addEventListener('click', () => {
   }
 })
 const messangerItems = document.querySelectorAll('.messanger-list-link');
+
+let isBurgerShow = false;
+
+console.log(window.innerWidth)
+  if(window.innerWidth <= 1090){
+    document.querySelector('.burger-menu').addEventListener('click', () => {
+      
+      if(!isBurgerShow){
+        document.querySelector('.header-main-nav').style.right = "0";
+        isBurgerShow = true;
+      } else {
+        document.querySelector('.header-main-nav').style.right = "-200px";
+        isBurgerShow = false;
+      }
+    })
+  }
