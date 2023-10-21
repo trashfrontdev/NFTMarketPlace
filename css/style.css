@@ -782,3 +782,15 @@ body {
   transform: rotate(360deg);
   transition: all 0.7s;
 }
+.main-info-btn-media, .main-body-flex-media {
+  display: none;
+}
+.article-btn-show {
+  display: none;
+}
+.aside-card-image img:last-child {
+  display: none;
+}
+.media-form-img {
+  display: none;
+}
