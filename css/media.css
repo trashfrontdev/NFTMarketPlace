@@ -37,6 +37,9 @@
   }
   /* ----- HEADER ----- */
   .header-main-nav {
+    display: none;
+  }
+  /* .header-main-nav {
     position: absolute;
     right: -200px;
     top: 0;
@@ -55,7 +58,7 @@
     justify-content: center;
     align-items: flex-start;
 
-  }
+  } */
   /* ----- SECTION ----- */
   .section-flex-item:last-child {
     display: none;
