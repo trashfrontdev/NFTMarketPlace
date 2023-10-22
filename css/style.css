@@ -25,11 +25,12 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   position: relative;
+  overflow-x: hidden;
 }
 .body-fixed {
   max-width: 100vw;
   max-height: 100vh;
-  overflow: hidden;
+  overflow-Y: hidden;
 }
 .header {
   width: 100%;

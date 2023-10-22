@@ -91,10 +91,12 @@ console.log(window.innerWidth)
     document.querySelector('.burger-menu').addEventListener('click', () => {
       
       if(!isBurgerShow){
+        bodyDoc.style.overflowX = "scroll";
         document.querySelector('.header-main-nav').style.right = "0";
         bodyDoc.classList.add('body-fixed');
         isBurgerShow = true;
       } else {
+        bodyDoc.style.overflowX = "hidden";
         document.querySelector('.header-main-nav').style.right = "-200px";
         isBurgerShow = false;
         bodyDoc.classList.remove('body-fixed');
