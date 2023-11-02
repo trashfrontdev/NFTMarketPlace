@@ -10,7 +10,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
-<body class="main-body">
+<body class="main-body ">
     <script src="script/script.js" defer></script>
     <div class="fixed-messanger">
         <ul class="main-messanger-list">
@@ -47,7 +47,7 @@
                         <a href="#" class="white nav-item-link">Connect a wallet</a>
                     </li>
                     <li class="header-nav-item">
-                        <a href="#" class="white nav-item-button"><img src="img/User.svg" alt=""> <span>Sign Up</span></a>
+                        <a href="#" onclick="openForm()" class="white nav-item-button"><img src="img/User.svg" alt=""> <span>Sign Up</span></a>
                     </li>
                 </ul>
                 
@@ -460,10 +460,13 @@
             </div>
         </div>
     </div>
-
+<div class="sign-up-absolute">
       <div class="sign-up-wrapper">
+        <div class="close-sign-form" onclick="closeForm()"><i class='bx bx-x'></i></div>
         <div class="sign-up-image">
-            <img src="img/sign-up/Image Placeholder.jpg" alt="">
+            <img src="img/sign-up/Image Placeholder.jpg" alt="" class="main-sign-img">
+            <img src="img/sign-up/Image Placeholder media.png" alt="" class="media-sign-img">
+            <img src="img/sign-up/media-mini.png" alt="" class="mini-sign-img">
         </div>
         <div class="sign-up-main-form">
             <div class="sign-up-content">
@@ -491,6 +494,7 @@
             </div>
         </div>
     </div> 
+</div>
     <footer class="footer">
         <div class="main-footer-container main-container">
             <div class="footer-flex-item">

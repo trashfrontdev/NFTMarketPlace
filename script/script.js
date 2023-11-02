@@ -35,26 +35,18 @@ const documentItems = [
 ];
 
 const signUpBtn = document.querySelector('.nav-item-button');
-
-// signUpBtn.addEventListener('click', () => {
-//   for(let docItem = 0; docItem < documentItems.length; docItem++){
-//     setTimeout(() => {
-//       documentItems[docItem].classList.add('main-animation');
-//       documentItems[docItem].style.animationName = "hide-wrapper";
-//       setTimeout(() => {
-//         documentItems[docItem].style.display = "none";
-//       }, 350)
-//     }, count)
-//     count += 350;
-//   }
-//   document.querySelector('.sign-up-wrapper').style.display = "flex";
-// })
-let count = 0;
-const logoButton = document.querySelector('.header-nav-logo');
-logoButton.addEventListener('click', () => {
-  
-})
 const messangerBtn = document.querySelector('.messanger-button');
+
+const openForm  = () => {
+  document.querySelector('.header-main-nav').style.top = "-55vh";
+  document.querySelector('.sign-up-absolute').style.display = "flex";
+  isBurgerShow = false;
+}
+
+const closeForm = () => {
+  document.querySelector('.sign-up-absolute').style.display = "none";
+}
+
 let isRotate = false;
 
 
@@ -87,19 +79,15 @@ const messangerItems = document.querySelectorAll('.messanger-list-link');
 let isBurgerShow = false;
 const bodyDoc = document.querySelector('.main-body');
 console.log(window.innerWidth)
-  // if(window.innerWidth <= 1090){
-  //   document.querySelector('.burger-menu').addEventListener('click', () => {
+  if(window.innerWidth <= 1090){
+    document.querySelector('.burger-menu').addEventListener('click', () => {
       
-  //     if(!isBurgerShow){
-  //       bodyDoc.style.overflowX = "scroll";
-  //       document.querySelector('.header-main-nav').style.right = "0";
-  //       bodyDoc.classList.add('body-fixed');
-  //       isBurgerShow = true;
-  //     } else {
-  //       bodyDoc.style.overflowX = "hidden";
-  //       document.querySelector('.header-main-nav').style.right = "-200px";
-  //       isBurgerShow = false;
-  //       bodyDoc.classList.remove('body-fixed');
-  //     }
-  //   })
-  // }
+      if(!isBurgerShow){
+        document.querySelector('.header-main-nav').style.top = "0";
+        isBurgerShow = true;
+      } else {
+        document.querySelector('.header-main-nav').style.top = "-55vh";
+        isBurgerShow = false;
+      }
+    })
+  }

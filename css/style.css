@@ -30,7 +30,7 @@ body {
 .body-fixed {
   max-width: 100vw;
   max-height: 100vh;
-  overflow-Y: hidden;
+  overflow: hidden;
 }
 .header {
   width: 100%;
@@ -645,17 +645,56 @@ body {
   gap: 5px;
 }
 /* -----SIGN UP----- */
-.sign-up-wrapper {
+
+.article, .main-form, .guide-wrapper, .details, .aside, .section, .main{
+  display: flex;
+}
+.sign-up-absolute {
   width: 100%;
-  background: var(--Background, #2b2b2b);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  backdrop-filter: blur(7px);
   display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 5342465;
+}
+.media-sign-img, .mini-sign-img {
+  display: none;
+}
+.sign-up-wrapper {
+  max-width: 1280px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  background-color: var(--Background---Secondary, #3b3b3b);
+  display: flex;
   align-items: center;
   gap: 60px;
-  align-self: stretch;
+  justify-content: space-between;
+}
+.close-sign-form {
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 37px;
+  height: 37px;
+  border-top: 0;
+  border-right: 0;
+  border-radius: 0 0 0 20px;
+}
+.bx-x {
+  font-size: 20px;
+  color: white;
+
 }
 .sign-up-main-form {
   display: flex;
-  padding: 100px 0px;
   flex-direction: column;
   align-items: flex-start;
   gap: 40px;
@@ -681,6 +720,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
 }
+
 .sign-up-inputs div {
   display: flex;
   height: 46px;
@@ -709,10 +749,6 @@ body {
 }
 .sign-up-inputs div:not(:last-child) {
   margin-top: 15px;
-}
-.sign-up-image {
-  width: 35%;
-  overflow: hidden;
 }
 .media-1000-img {
   display: none;
